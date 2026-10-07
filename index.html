@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Student Profile Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div>
+            <h1>College Student Portal</h1>
+            <p class="subtitle">Student Profile Management System</p>
+        </div>
+        <a href="#profile">My Profile</a>
+    </nav>
+</header>
+
+<main>
+    <section class="welcome">
+        <div>
+            <p class="tag">COLLEGE PORTAL</p>
+            <h2>Manage Your Student Profile</h2>
+            <p>Students can enter, edit and save their academic and personal profile information from one place.</p>
+        </div>
+        <button id="editTopBtn">Update Profile</button>
+    </section>
+
+    <div id="message" class="message"></div>
+
+    <section class="portal-grid">
+        <div class="card" id="profile">
+            <div class="profile-header">
+                <div id="profilePhoto" class="profile-photo">PHOTO</div>
+                <div>
+                    <h2 id="displayName">Student Name</h2>
+                    <p id="displayCourse">Course & Year</p>
+                    <p id="displayRoll">Roll Number</p>
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div><span>College</span><strong id="displayCollege">Your College</strong></div>
+                <div><span>Section</span><strong id="displaySection">-</strong></div>
+                <div><span>Email</span><strong id="displayEmail">-</strong></div>
+                <div><span>Phone</span><strong id="displayPhone">-</strong></div>
+                <div><span>Location</span><strong id="displayLocation">-</strong></div>
+                <div><span>GitHub</span><strong id="displayGithub">-</strong></div>
+            </div>
+
+            <div class="profile-section">
+                <h3>About Me</h3>
+                <p id="displayAbout">Add a short introduction about yourself.</p>
+            </div>
+
+            <div class="profile-section">
+                <h3>Skills</h3>
+                <div id="displaySkills" class="chips"><span>Not added</span></div>
+            </div>
+
+            <div class="profile-section">
+                <h3>Projects</h3>
+                <div id="displayProjects" class="project-list"><p>Not added</p></div>
+            </div>
+
+            <div class="profile-section">
+                <h3>Certifications & Achievements</h3>
+                <ul id="displayAchievements"><li>Not added</li></ul>
+            </div>
+        </div>
+
+        <aside class="card form-card">
+            <div class="form-heading">
+                <div>
+                    <p class="tag">STUDENT DETAILS</p>
+                    <h2>Update Profile</h2>
+                </div>
+                <button class="small-button" id="clearBtn" type="button">Clear</button>
+            </div>
+
+            <form id="profileForm">
+                <label>Full Name<input id="name" required placeholder="Enter your full name"></label>
+                <label>Roll Number<input id="roll" placeholder="e.g. 24KB1A05Y5"></label>
+                <label>College<input id="college" placeholder="Enter college name"></label>
+
+                <div class="two-col">
+                    <label>Course / Branch<input id="course" placeholder="e.g. B.Tech CSE"></label>
+                    <label>Year<input id="year" placeholder="e.g. 3rd Year"></label>
+                </div>
+
+                <div class="two-col">
+                    <label>Section<input id="section" placeholder="e.g. F"></label>
+                    <label>Phone<input id="phone" type="tel" placeholder="Optional"></label>
+                </div>
+
+                <label>Email<input id="email" type="email" placeholder="student@example.com"></label>
+                <label>Location<input id="location" placeholder="City, State"></label>
+                <label>GitHub username / URL<input id="github" placeholder="github.com/username"></label>
+
+                <label>About Me<textarea id="about" rows="4" placeholder="Write a short introduction"></textarea></label>
+                <label>Skills <small>Separate skills with commas</small><input id="skills" placeholder="C, Java, Python, HTML, SQL"></label>
+                <label>Projects <small>One project per line: Project name - description</small><textarea id="projects" rows="5" placeholder="Student Management System - Manages student records"></textarea></label>
+                <label>Certifications & Achievements <small>One item per line</small><textarea id="achievements" rows="4" placeholder="Python Certification"></textarea></label>
+                <label>Profile Photo URL <small>Optional image URL</small><input id="photo" placeholder="https://..."></label>
+
+                <button class="save-button" type="submit">Save Profile</button>
+            </form>
+        </aside>
+    </section>
+
+    <section class="card how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div><b>1</b><span>Enter your student details.</span></div>
+            <div><b>2</b><span>Click Save Profile.</span></div>
+            <div><b>3</b><span>Your profile updates instantly.</span></div>
+            <div><b>4</b><span>Details are saved in this browser.</span></div>
+        </div>
+        <p class="note"><strong>College deployment note:</strong> This version uses browser local storage. For multiple students to update profiles from different devices, connect the form to a backend/database and add student login authentication.</p>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 College Student Portal</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
